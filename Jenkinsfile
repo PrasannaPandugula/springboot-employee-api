@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/your-username/springboot-employee-api.git'
+                git branch: 'master', url: 'https://github.com/PrasannaPandugula/springboot-employee-api.git'
             }
         }
 
@@ -21,7 +21,7 @@ pipeline {
 
         stage('Run Application') {
             steps {
-                bat 'start /B java -jar target/springboot-employee-api-1.0.0.jar'
+                bat 'start /B java -jar target\\*.jar'
             }
         }
     }
